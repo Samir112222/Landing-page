@@ -1,0 +1,265 @@
+/* Base Setup */
+:root {
+    --primary-color: #D32F2F; /* Deep red, like artisanal bread crust */
+    --secondary-color: #FFC107; /* Warm yellow, like fresh pastry */
+    --accent-color: #795548; /* Chocolate brown, reflecting rich flavors */
+    --text-color: #5D4037; /* Earthy brown for text, enhancing readability */
+    --background-color: #fff8e1; /* Creamy background, soft and inviting */
+    --card-background: rgba(255, 255, 255, 0.8); /* Semi-transparent cards for glassmorphism effect */
+    --btn-hover-color: #B71C1C; /* Darker shade for button hover state */
+    --font-family: 'Overpass', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  /* Smooth Scroll for all browsers */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Utility Classes */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  /* Header/Banner Styling */
+  .Banner {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/Fond\ 1.png') no-repeat center center/cover;
+    opacity: 0.6;
+    z-index: 0;
+  }
+  
+  .Banner * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .Banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .Banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn-brown {
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-brown:hover {
+    background: var(--btn-hover-color);
+  }
+  
+  /* Cards Section */
+  .section {
+    margin: 40px 0;
+  }
+  
+  .Cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: var(--card-background);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.18); /* Border for glassmorphism */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .card button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background: var(--btn-hover-color);
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .Cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Subtle Animations */
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .Banner, .card, .footer {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  /* Scroll Effects */
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  /* Base settings */
+body, h2, h3, p, button, input, textarea {
+    font-family: 'Overpass', sans-serif;
+  }
+  
+  .section {
+    padding: 40px;
+    background-color: #f9f5f0;
+    color: #333;
+  }
+  
+  h2 {
+    color: #d67c1c;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Upcoming Events section */
+  .events {
+    background-color: #fffbea;
+    border-top: 2px solid #d67c1c;
+    border-bottom: 2px solid #d67c1c;
+  }
+  
+  .event {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-image: url('images/Bakkery.jpg');
+  background-size: cover;
+  background-position: center;
+  }
+  
+  .event h3 {
+    color: #b35900;
+    margin-bottom: 15px;
+  }
+  
+  .event p {
+    margin-bottom: 15px;
+  }
+  
+  .event button {
+    background-color: #d67c1c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event button:hover {
+    background-color: #b35900;
+  }
+  
+  /* Contact Us form styles */
+  /* You can add similar styling for the Contact Us form inputs and button for consistency */
+  
+  /* Footer section */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* General button styling */
+  button {
+    font-size: 16px;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .event, .footer {
+      padding: 20px 10px;
+    }
+  }
+  
